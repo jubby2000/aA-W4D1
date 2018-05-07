@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   def index
     users = User.all
     render json: users
-    # render plain: "I am Aakash"
   end
 
   def create
@@ -37,6 +36,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:username)
   end
 end
